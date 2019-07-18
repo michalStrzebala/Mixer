@@ -1,0 +1,21 @@
+.mix-form{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mix-form textarea{
+    border: 1px solid #777;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px;
+}
+
+.mix-form input[type="submit"]{
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 10px 30px;
+    background: transparent;
+    margin-top: 15px;
+}

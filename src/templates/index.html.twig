@@ -6,15 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mieszarka Synonimów</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<form action="{{ base_url() }} method="POST">
+<form class="mix-form" action="{{ base_url() }}/mix" method="POST">
     <label for="">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        Wpisz tekst który ma zostać wymieszany ( wzór: {Ala|Ola} ma {kota|psa|kune|dzika|jenota} )
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
     </label>
     <label for="">
-        <input type="submit">
+        <input type="submit" value="Mieszaj">
     </label>
 </form>
 

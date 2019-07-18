@@ -6,11 +6,14 @@ class MixerController
 
     public static function mix( $request, $response, $object  ){
 
+        var_dump($request->getBody());
+
         return $object->view->render( $response, 'profile.html.twig');
 
     }
 
     private function synonymMixer( $text ){
+
     $re = '/{(.*?)}/';
         $text = preg_replace_callback(
         $re,
