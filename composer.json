@@ -1,0 +1,13 @@
+{
+    "name": "patryk/slim",
+    "require": {
+        "slim/slim": "^3.12",
+        "slim/twig-view": "^2.5"
+    },
+    "autoload": {
+        "classmap": [
+            "src/controllers/MixerController.php",
+            "src/controllers/PageController.php"
+        ]
+    }
+}
