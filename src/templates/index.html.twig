@@ -11,15 +11,19 @@
 </head>
 <body>
 
-<form class="mix-form" action="{{ base_url() }}/mix" method="POST">
+<form class="mix-form" action="{{ base_url() }}/" method="POST">
     <label for="">
-        Wpisz tekst który ma zostać wymieszany ( wzór: {Ala|Ola} ma {kota|psa|kune|dzika|jenota} )
-        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        <p>Wpisz tekst który ma zostać wymieszany ( wzór: {Ala|Ola} ma {kota|psa|kune|dzika|jenota} )</p>
+        <textarea name="text" id="text" cols="30" rows="10">{{ originalText }}</textarea>
     </label>
     <label for="">
         <input type="submit" value="Mieszaj">
     </label>
 </form>
+
+{% for item in text %}
+    <p>{{ item }}</p>
+{% endfor %}
 
 </body>
 </html>

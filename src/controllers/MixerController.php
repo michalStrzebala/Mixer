@@ -4,11 +4,17 @@
 class MixerController
 {
 
+    public static function index( $response, $object ){
+
+        return $object->view->render( $response, 'index.html.twig');
+
+    }
+
     public static function mix( $request, $response, $object  ){
 
-        var_dump($request->getBody());
+        $text = $request->getParsedBody('text');
 
-        return $object->view->render( $response, 'profile.html.twig');
+        return $object->view->render( $response, 'index.html.twig', [ 'text' =>  self::synonymMixer( $text ), 'originalText' => $text['text'] ]);
 
     }
 
